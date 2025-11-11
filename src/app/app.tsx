@@ -1,5 +1,6 @@
-import { ThemeProvider, ThemeToggle } from '../modules/theme'
-import styles from './app.module.css'
+import { ThemeProvider, ThemeToggle } from '../modules/theme';
+import { CounterProvider, CounterWithContext, CounterWithHook } from '../modules/counter';
+import styles from './app.module.css';
 
 function MainPage() {
     return (
@@ -9,6 +10,13 @@ function MainPage() {
             </h1>
 
             <ThemeToggle />
+
+            <CounterProvider>
+                <CounterWithContext />
+                <CounterWithContext />
+                <CounterWithHook />
+                <CounterWithHook />
+            </CounterProvider>
 
             <div className={styles.explanation}>
                 <h3 className={styles.explanationTitle}>Примеры:</h3>
